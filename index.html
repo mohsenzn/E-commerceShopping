@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -13,9 +13,54 @@
     />
     <!-- css custom -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/images/fav-icon.png" />
     <title>Shopping || HomePage</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav>
+      <!-- social Icons -->
+      <div class="social__icons">
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="phone">
+          <span>Call +123456789</span>
+        </div>
+      </div>
+
+      <!-- menu bar -->
+      <div class="navigation">
+        <!-- logo -->
+        <a href="#" class="logo">
+          <img src="assets/images/logo.png" alt="logo" />
+        </a>
+        <!-- menu -->
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+
+          <li><a href="#">Men</a>
+            <!-- sale label -->
+            <span class="sale-label">Sale</span>
+          </li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Kids</a></li>
+          <li><a href="#">Shop</a></li>
+        </ul>
+        <!-- right menu -->
+        <div class="menu__right">
+          <a href="#"><i class="fas fa-search"></i></a>
+          <a href="#"><i class="fas fa-user"></i></a>
+          <a href="#"><i class="fas fa-shopping-cart">
+            <span class="num-cart-product">0</span></i>
+          </a>
+
+        </div>
+      </div>
+    </nav>
     <script src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>
