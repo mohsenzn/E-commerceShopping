@@ -13,6 +13,8 @@
     />
     <!-- css custom -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!--   light  slider -->
+   <link rel="stylesheet" href="assets/css/lightslider.css">
     <link rel="shortcut icon" href="assets/images/fav-icon.png" />
     <title>Shopping || HomePage</title>
   </head>
@@ -76,48 +78,129 @@
     <!-- Login and sign up form -->
     <div class="form">
       <div class="login__form">
-        <a href="#" class="form__cancel" >
+        <a href="#" class="form__cancel">
           <i class="fas fa-times"></i>
-  
         </a>
         <strong>Log In</strong>
         <form action="">
-          <input type="email" placeholder="Example@gmail.com" name="email" required>
-          <input type="password" placeholder="Password" name="password" required>
-          <input type="submit" value="Log In"/>
+          <input
+            type="email"
+            placeholder="Example@gmail.com"
+            name="email"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+          />
+          <input type="submit" value="Log In" />
         </form>
         <!-- Forget sign up -->
         <div class="form__btn">
-            <a href="#" class="forget">Forget Your Password</a>
-            <a href="#" class="sign-up-btn">Create Account</a>
+          <a href="#" class="forget">Forget Your Password</a>
+          <a href="#" class="sign-up-btn">Create Account</a>
         </div>
       </div>
       <!-- sign up -->
       <div class="singUp__form">
-        <a href="#" class="form__cancel2" >
+        <a href="#" class="form__cancel2">
           <i class="fas fa-times"></i>
-  
         </a>
         <strong>Sign up</strong>
         <form action="">
-          <input type="text" placeholder="Full Name" name="fullName" required>
-          <input type="email" placeholder="Example@gmail.com" name="email" required>
-          <input type="password" placeholder="Password" name="password" required>
-          <input type="submit" value="Sign up"/>
+          <input type="text" placeholder="Full Name" name="fullName" required />
+          <input
+            type="email"
+            placeholder="Example@gmail.com"
+            name="email"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+          />
+          <input type="submit" value="Sign up" />
         </form>
         <!-- Forget sign up -->
         <div class="form__btn">
-            <a href="#" class="haveAccount">Already Have Account?</a>
+          <a href="#" class="haveAccount">Already Have Account?</a>
         </div>
       </div>
     </div>
+    <!-- end of form -->
+    <!-- full slider -->
+    <ul id="adaptive" class="cs-hidden">
+      <!-- box one -->
+      <li class="item-a">
+        <div class="fullSlider__box fSlider__1">
+          <div class="slider__container">
+            <div class="slider__content">
+              <span>Limited offer</span>
+              <strong
+                >40% off <br />
+                with <font>promo code</font></strong
+              >
+              <a href="#" class="slider__btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- box Twos -->
+      <li class="item-a">
+        <div class="fullSlider__box fSlider__3">
+          <div class="slider__container">
+            <div class="slider__content">
+              <span>Limited offer</span>
+              <strong
+                >40% off <br />
+                with <font>promo code</font></strong
+              >
+              <a href="#" class="slider__btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </li>
+          <!-- box Three -->
+          <li class="item-a">
+            <div class="fullSlider__box fSlider__2">
+              <div class="slider__container">
+                <div class="slider__content">
+                  <span>Limited offer</span>
+                  <strong
+                    >40% off <br />
+                    with <font>promo code</font></strong
+                  >
+                  <a href="#" class="slider__btn">Shop Now</a>
+                </div>
+              </div>
+            </div>
+          </li>
+    </ul>
+ 
+
     <!-- jquery -->
-    <!-- <script
+    <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
-    ></script> -->
+    ></script>
+    <script src="assets/js/lightslider.js"></script>
     <!-- custom js -->
     <script src="assets/js/main.js"></script>
+    <script>
+      $(document).ready(function() {
+    $('#adaptive').lightSlider({
+        adaptiveHeight:true,
+        item:1,
+        slideMargin:0,
+        loop:true,
+        auto:true
+    });
+});
+    </script>
   </body>
 </html>
