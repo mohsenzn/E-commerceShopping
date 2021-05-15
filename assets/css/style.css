@@ -15,6 +15,7 @@
   --title-color2: #7a72ff;
   --text-color: #7c7c7c;
   --lightGrey: #555;
+  --lightGrey2:#868686;
   --darkGrey: #3d3d3d;
   --body-color: #1d1d1d;
   --White: #fff;
@@ -118,7 +119,8 @@ nav {
 }
 .menu a:hover,
 .menu__right a:hover,
-.search__cancel:hover {
+.search__cancel:hover,
+.form__cancel:hover {
   color: var(--first-color);
   transition: all ease 0.5s;
 }
@@ -231,7 +233,8 @@ nav {
   flex-direction: column;
   z-index: 102;
 }
-.login__form {
+.login__form,
+.singUp__form {
   width: 420px;
   padding: 20px 10px;
   background-color: var(--White);
@@ -241,15 +244,18 @@ nav {
   flex-direction: column;
   align-items: center;
   border-radius: 5px;
+  position: relative;
 }
-.login__form form {
+.login__form form ,
+.singUp__form form{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
 }
-.login__form strong {
+.login__form strong ,
+.singUp__form strong {
   color: #272727;
   font-size: 2rem;
   margin: 2px 7px 7px 7px;
@@ -257,7 +263,8 @@ nav {
   letter-spacing: 0.5px;
   font-weight: 400;
 }
-.login__form input {
+.login__form input ,
+.singUp__form input {
   width: 90%;
   height: 45px;
   margin: 6px 0;
@@ -265,10 +272,12 @@ nav {
   outline: none;
   border-radius: 7px;
 }
-.login__form input::placeholder {
+.login__form input::placeholder ,
+.singUp__form input::placeholder{
   color: rgba(0, 0, 0, 0.5);
 }
-.login__form input[type="submit"] {
+.login__form input[type="submit"] ,
+.singUp__form input[type="submit"]{
   background-color: var(--first-color);
   color: var(--White);
   border: none;
@@ -277,4 +286,50 @@ nav {
   margin-top: 10px;
   border-radius: 3px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+}
+.form__btn {
+  width:90%;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top: 10px;
+}
+.form__btn a{
+  color: #4d4d4d;
+  font-size: 0.9rem;
+}
+.sign-up-btn {
+  border-bottom: 1px solid var(--lightGrey2);
+  line-height: 16px;
+}
+.form__cancel,
+.form__cancel2 {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: var(--lightGrey2);
+}
+.login__form,
+.singUp__form,
+.form{
+  display:none;
+}
+.login-active,
+.login-active .login__form{
+  display:flex;
+  animation: fade 0.3s;
+}
+.signUp-active,
+.signUp-active .singUp__form{
+  display:flex;
+  animation: fade 0.3s;
+
+}
+@keyframes fade{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }

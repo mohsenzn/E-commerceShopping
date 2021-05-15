@@ -54,7 +54,7 @@
         <!-- right menu -->
         <div class="menu__right">
           <a href="#"><i class="fas fa-search"></i></a>
-          <a href="#"><i class="fas fa-user"></i></a>
+          <a href="#" class="user"><i class="fas fa-user"></i></a>
           <a href="#"
             ><i class="fas fa-shopping-cart">
               <span class="num-cart-product">0</span></i
@@ -76,12 +76,39 @@
     <!-- Login and sign up form -->
     <div class="form">
       <div class="login__form">
+        <a href="#" class="form__cancel" >
+          <i class="fas fa-times"></i>
+  
+        </a>
         <strong>Log In</strong>
         <form action="">
-          <input type="email" placeholder="Example@gmail.com" name="email">
-          <input type="password" placeholder="Password" name="password">
+          <input type="email" placeholder="Example@gmail.com" name="email" required>
+          <input type="password" placeholder="Password" name="password" required>
           <input type="submit" value="Log In"/>
         </form>
+        <!-- Forget sign up -->
+        <div class="form__btn">
+            <a href="#" class="forget">Forget Your Password</a>
+            <a href="#" class="sign-up-btn">Create Account</a>
+        </div>
+      </div>
+      <!-- sign up -->
+      <div class="singUp__form">
+        <a href="#" class="form__cancel2" >
+          <i class="fas fa-times"></i>
+  
+        </a>
+        <strong>Sign up</strong>
+        <form action="">
+          <input type="text" placeholder="Full Name" name="fullName" required>
+          <input type="email" placeholder="Example@gmail.com" name="email" required>
+          <input type="password" placeholder="Password" name="password" required>
+          <input type="submit" value="Sign up"/>
+        </form>
+        <!-- Forget sign up -->
+        <div class="form__btn">
+            <a href="#" class="haveAccount">Already Have Account?</a>
+        </div>
       </div>
     </div>
     <!-- jquery -->
