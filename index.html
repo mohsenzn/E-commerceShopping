@@ -14,7 +14,7 @@
     <!-- css custom -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!--   light  slider -->
-   <link rel="stylesheet" href="assets/css/lightslider.css">
+    <link rel="stylesheet" href="assets/css/lightslider.css" />
     <link rel="shortcut icon" href="assets/images/fav-icon.png" />
     <title>Shopping || HomePage</title>
   </head>
@@ -164,23 +164,86 @@
           </div>
         </div>
       </li>
-          <!-- box Three -->
-          <li class="item-a">
-            <div class="fullSlider__box fSlider__2">
-              <div class="slider__container">
-                <div class="slider__content">
-                  <span>Limited offer</span>
-                  <strong
-                    >40% off <br />
-                    with <font>promo code</font></strong
-                  >
-                  <a href="#" class="slider__btn">Shop Now</a>
-                </div>
-              </div>
+      <!-- box Three -->
+      <li class="item-a">
+        <div class="fullSlider__box fSlider__2">
+          <div class="slider__container">
+            <div class="slider__content">
+              <span>Limited offer</span>
+              <strong
+                >40% off <br />
+                with <font>promo code</font></strong
+              >
+              <a href="#" class="slider__btn">Shop Now</a>
             </div>
-          </li>
+          </div>
+        </div>
+      </li>
     </ul>
- 
+    <!-- end of slider -->
+    <!-- featured -->
+    <div class="featured__heading">
+      <h2>Featured Categories</h2>
+    </div>
+    <!-- featured boxes -->
+    <ul id="autoWidth" class="cs-hidden">
+      <!-- 1 -->
+      <li class="item">
+        <div class="feature__box">
+          <a href="#">
+            <img src="assets/images/feature_1.jpg" alt="" />
+          </a>
+        </div>
+        <span>T-Shirt</span>
+      </li>
+      <!-- 2 -->
+      <li class="item">
+        <div class="feature__box">
+          <a href="#">
+            <img src="assets/images/feature_2.jpg" alt="" />
+          </a>
+        </div>
+        <span>T-Shirt</span>
+      </li>
+      <!-- 3 -->
+      <li class="item">
+        <div class="feature__box">
+          <a href="#">
+            <img src="assets/images/feature_3.jpg" alt="" />
+          </a>
+        </div>
+        <span>T-Shirt</span>
+      </li>
+      <!-- 4 -->
+      <li class="item">
+        <div class="feature__box">
+          <a href="#">
+            <img src="assets/images/feature_4.jpg" alt="" />
+          </a>
+        </div>
+        <span>T-Shirt</span>
+      </li>
+      <!-- 5 -->
+      <li class="item">
+        <div class="feature__box">
+          <a href="#">
+            <img src="assets/images/feature_5.jpg" alt="" />
+          </a>
+        </div>
+        <span>T-Shirt</span>
+      </li>
+      <!-- 6 -->
+      <li class="item">
+        <div class="feature__box">
+          <a href="#">
+            <img src="assets/images/feature_6.jpg" alt="" />
+          </a>
+        </div>
+        <span>T-Shirt</span>
+      </li>
+    </ul>
+
+    <!-- end of featured -->
 
     <!-- jquery -->
     <script
@@ -192,15 +255,26 @@
     <!-- custom js -->
     <script src="assets/js/main.js"></script>
     <script>
-      $(document).ready(function() {
-    $('#adaptive').lightSlider({
-        adaptiveHeight:true,
-        item:1,
-        slideMargin:0,
-        loop:true,
-        auto:true
-    });
-});
+      $(document).ready(function () {
+        $("#adaptive").lightSlider({
+          adaptiveHeight: true,
+          item: 1,
+          slideMargin: 0,
+          loop: true,
+          auto: true,
+        });
+      });
+
+      // featured
+      $(document).ready(function () {
+        $("#autoWidth").lightSlider({
+          autoWidth: true,
+          loop: true,
+          onSliderLoad: function () {
+            $("#autoWidth").removeClass("cS-hidden");
+          },
+        });
+      });
     </script>
   </body>
 </html>
